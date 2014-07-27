@@ -1,11 +1,14 @@
-This repository contains R script for Getting and Cleaning Data Course Project .
+##This repository contains R script for Getting and Cleaning Data Course Project .
 
+<b>Directory structure</b>
 Script assumes the following directory structure:
-	features.txt, activity_labels in R working directory
-	Test files in test subdirectory of R working directory
-	Train files in train subdirectory of R working directory
+<ol>
+<li>features.txt, activity_labels in R working directory
+<li>Test files in test subdirectory of R working directory
+<li>Train files in train subdirectory of R working directory
+</ol>
 
-How do the script works:
+<b>How do the script works:</b>
 Read files with features and activity names 
 Read test sample data
 Define function Create_Data for merging X, y and subject id, adding feature names, extracting only features with means & std, adding sample label
@@ -14,7 +17,7 @@ Merge train and test data using rbind
 Writes data to a file
 Next part creates second data frame using melt and dcast form reshape2, and saves result to a file 
 
-Function Create_Data(subject,x,y,features,activity_labels,sample_label)
+<b>Function Create_Data(subject,x,y,features,activity_labels,sample_label)</b>
 subject – data frame with subject id's
 x – x data
 y – y data (activity codes)
@@ -27,7 +30,7 @@ names y and subject columns
 Find which x col names contains mean or std and creates subset of with these columns
 Merge data frames
 
-Variables in result data file (first one)
+<b>Variables in result data file (first one)</b>
 activity_code – original code of activity
 subject – subject ID
 variables - from original data (names form feature_names file)
