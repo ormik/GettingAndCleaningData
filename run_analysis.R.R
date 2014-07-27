@@ -1,22 +1,22 @@
 
 #Read files with features and activity names 
-features <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/features.txt", quote="\"")
-activity_labels <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/activity_labels.txt", quote="\"")
+features <- read.table("features.txt", quote="\"")
+activity_labels <- read.table("activity_labels.txt", quote="\"")
 colnames(activity_labels)=c("code","activity")
 
 #Read test sample 
-subject_test <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/test/subject_test.txt", quote="\"")
-X_test <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/test/X_test.txt", quote="\"")
-y_test <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/test/y_test.txt", quote="\"")
+subject_test <- read.table("test/subject_test.txt", quote="\"")
+X_test <- read.table("test/X_test.txt", quote="\"")
+y_test <- read.table("test/y_test.txt", quote="\"")
 
 #Read train sample
-subject_train <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/train/subject_train.txt", quote="\"")
-X_train <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/train/X_train.txt", quote="\"")
-y_train <- read.table("~/R/Coursera/Getting and Cleaning Data/Project/train/y_train.txt", quote="\"")
+subject_train <- read.table("train/subject_train.txt", quote="\"")
+X_train <- read.table("train/X_train.txt", quote="\"")
+y_train <- read.table("train/y_train.txt", quote="\"")
 
 
 
-#Define function for mergin X, y and subject id, adding feature names, 
+#Define function for merging X, y and subject id, adding feature names, 
 #extracting only features with means & std, adding sample label
 Create_Data<-function(subject,x,y,features,activity_labels,sample_label)
 {
