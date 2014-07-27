@@ -33,7 +33,7 @@ Function:
 <ol>
 <li>adds proper names to x columns  using features data frame
 <li>creates names y and subject columns
-<li>Find which x col names contains mean or std and creates subset of with these columns
+<li>finds which x col names contains mean or std (using grepl function for reg. expr.) and creates subset of with these columns
 <li>Merge data frames
 </ol>
 
